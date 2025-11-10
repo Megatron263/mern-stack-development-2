@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Validation Demo</title>
+    <script>
+        function validateInputs() {
+            let name = prompt("Enter your name:");
+            let mobile = prompt("Enter your mobile number:");
+
+            // Regular expressions
+            let nameRegex = /^[A-Za-z\s]{2,}$/; // Only letters and spaces, at least 2 characters
+            let mobileRegex = /^[6-9]\d{9}$/;   // Starts with 6-9 and has exactly 10 digits
+
+            // Validate name
+            if (!nameRegex.test(name)) {
+                alert("Invalid name. Use only letters and spaces (min 2 characters).");
+                return;
+            }
+
+            // Validate mobile number
+            if (!mobileRegex.test(mobile)) {
+                alert("Invalid mobile number. It must be 10 digits starting with 6-9.");
+                return;
+            }
+
+            alert("✅ Both name and mobile number are valid!");
+        }
+    </script>
+</head>
+<body>
+    <h2>Validate Name and Mobile Number</h2>
+    <button onclick="validateInputs()">Run Validation</button>
+</body>
+</html>

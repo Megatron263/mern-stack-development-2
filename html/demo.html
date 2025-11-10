@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Custom Object DEMO</title>
+            <script>
+                let s1={
+                    sid:546,
+                    sname:"Believe",
+                    marks:79,
+
+                    display:function(){
+                       // console.log(this.sid+"-"+this.sname+"-"+this.marks);
+                       return this.sid+"-"+this.sname+"-"+this.marks;
+                    }
+                }
+                console.log("SID:"+s1.sid);
+                console.log("Sname:"+s1.sname);
+                console.log("Marks:"+s1.marks);
+                let res =s1.display();
+                document.write();
+                //s1.display();
+            </script>
+    </head>
+    <body>
+        <h1>working with custom objects</h1>
+    </body>
+</html>

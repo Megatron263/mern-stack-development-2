@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ARRAY OBJECT DEMO
+        </title>
+        <script>
+            function showArrayOperations(){
+                let fruits=["apple","banana",'mango']
+                document.getElementById("original").innerText="original array:"+fruits;
+                 document.getElementById("length").innerText="lenght:"+fruits.length;
+                 fruits.push("orange");
+                 let popped=fruits.pop;
+                 fruits.unshift("strawberry");
+                 let shifted=fruits.shift;
+                 let index=fruits.indexOf("banana");
+                 document.getElementById("final array").innerText="finalarray:"+fruits;
+ document.getElementById("popped").innerText="popped elements:"+popped;
+ document.getElementById("shifted").innerText="shifted elements:"+shifted;
+ document.getElementById("index").innerText="index of banana:"+index;
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Array Object Properties and Methods</h2>
+  <button onclick="showArrayOperations()">Run Array Operations</button>
+
+  <p id="original"></p>
+  <p id="length"></p>
+  <p id="popped"></p>
+  <p id="shifted"></p>
+  <p id="index"></p>
+  <p id="finalArray" style="font-weight: bold; color: green;"></p>
+    </body>
+</html>
